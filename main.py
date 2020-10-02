@@ -115,12 +115,13 @@ def diagonal_check():
 def turn_handle(current_player):
   position = input("\n Enter a position from 1-9 (position 1 refers to left top corner and increases rightwards) or see the above figur with numbers wherer numbers indicate the postion in matrix: ")
   valid= True
+  position_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
   while valid:
 
-    while position not in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+    while position not in position_list:
       print("\n Invalid input!! \n")
-      position = input("\n Enter a position from 1-9 (position 1 refers to left top corner and increases rightwards) or see the above figur with numbers wherer numbers indicate the postion in matrix: ")
+      position = input("\n Enter a position from 1-9 (position 1 refers to left top corner and increases rightwards) or see the above figure with numbers where numbers indicate the postion in matrix: ")
     position = int(position) - 1
     if board[position] == '_':
       valid= False
@@ -137,7 +138,7 @@ def swap_player():
   global current_player
   if current_player == 'X':
     current_player = 'O'
-  elif current_player == 'O':
+  else:
     current_player = 'X'
 
 
