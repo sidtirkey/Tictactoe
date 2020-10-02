@@ -8,6 +8,7 @@ board =["_", "_","_",
         "_","_","_",
         "_","_","_"]
 
+
 board1 =["1", "2","3",
         "4","5","6",
         "7","8","9"]
@@ -15,6 +16,7 @@ print( board1[0] + "|" + board1[1] + "|" + board1[2] )
 print( board1[3] + "|" + board1[4] + "|" + board1[5] )
 print( board1[6] + "|" + board1[7] + "|" + board1[8] )
 print("\n ______________________________________________   \n")
+
 
 
 def display_board():
@@ -115,10 +117,11 @@ def diagonal_check():
 def turn_handle(current_player):
   position = input("\n Enter a position from 1-9 (position 1 refers to left top corner and increases rightwards) or see the above figur with numbers wherer numbers indicate the postion in matrix: ")
   valid= True
+  position_list =  ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
   while valid:
 
-    while position not in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+    while position not in position_list:
       print("\n Invalid input!! \n")
       position = input("\n Enter a position from 1-9 (position 1 refers to left top corner and increases rightwards) or see the above figur with numbers wherer numbers indicate the postion in matrix: ")
     position = int(position) - 1
