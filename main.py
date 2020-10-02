@@ -137,7 +137,7 @@ def swap_player():
   global current_player
   if current_player == 'X':
     current_player = 'O'
-  elif current_player == 'O':
+  else:
     current_player = 'X'
 
 
