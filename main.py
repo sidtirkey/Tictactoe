@@ -34,7 +34,7 @@ def play_game():
 
   if winner=="X" or winner=="O":
     print ("winner is:" + winner)
-  elif winner==None:
+  else:
      print("It's a tie!!") 
 
 
